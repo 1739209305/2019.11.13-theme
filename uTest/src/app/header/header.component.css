@@ -1,0 +1,15 @@
+.example-spacer{
+	flex:1 1 auto;
+}
+mat-form-field{
+	font-size: 15px;
+}
+#toolbar1{
+	height: 20px;
+}
+#search{
+	/* margin-right: 10px; */
+}
+#theme1{
+	margin: 20px;
+}

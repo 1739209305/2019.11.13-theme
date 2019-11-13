@@ -1,0 +1,387 @@
+<form [formGroup]="reactiveForm">
+ <mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
+    <mat-tab label="(P)Applicant">
+    <mat-card id="card">
+		<mat-card-content>
+		<mat-icon>perm_identity</mat-icon>
+		<span>Personal Information</span>
+		<mat-divider [inset]="true"></mat-divider>
+			<div fxLayout="row wrap">
+				<!-- 使用layout布局 fxLayoutGap="20px"是间距-->
+			  <mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Last name*" [errorStateMatcher]="matcher" formControlName="LastName">
+				    <mat-error *ngIf="reactiveForm.get('LastName').invalid">
+				      Last name is <strong>required</strong>
+				    </mat-error>
+			  </mat-form-field>
+			
+			
+			    <mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="First name*" [errorStateMatcher]="matcher" formControlName="FirstName">
+				    <mat-error *ngIf="reactiveForm.get('FirstName').invalid">
+				      First name is <strong>required</strong>
+				    </mat-error>
+			  </mat-form-field>
+		 	
+			   <mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Local English Last name*" [errorStateMatcher]="matcher"formControlName="CLastName">
+				    <mat-error *ngIf="reactiveForm.get('CLastName').invalid">
+				      Local English Last name is <strong>required</strong>
+				    </mat-error>
+			  </mat-form-field>
+		 	
+			 	<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Local English First name*" [errorStateMatcher]="matcher" fxFlex.gt-sm="20" fxFlex.get-lg="15" formControlName="CFirstName">
+				    <mat-error *ngIf="reactiveForm.get('CFirstName').invalid">
+				      Local English First name is <strong>required</strong>
+				    </mat-error>
+		  		</mat-form-field>
+		 	
+			 	 <mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Sex</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let sex of sex" [value]="sex.value">
+				      {{sex.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+		 	
+		 		<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Nationality</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Nationality of Nationality" [value]="Nationality.value">
+				      {{Nationality.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				</mat-form-field>
+		 	
+		 		<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <input matInput [matDatepicker]="picker" placeholder="Date of Birth">
+				  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+				  <mat-datepicker #picker></mat-datepicker>
+				</mat-form-field>
+		 	
+		 		<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Material Status</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Material of Material" [value]="Material.value">
+				      {{Material.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+		 	
+		 		 <mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Educational Level</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Educational of Educational" [value]="Educational.value">
+				      {{Educational.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+		 	
+		 		 <mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Customer ID Proof</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let CustomerId of CustomerIDProof" [value]="CustomerId.value">
+				      {{CustomerId.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+		 	
+		 		<mat-form-field fxFlex.gt-md="20" class="example-full-width" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				   <input matInput placeholder="ID Numer*" [errorStateMatcher]="matcher" formControlName="IDNumber">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				   <mat-error *ngIf="reactiveForm.get('IDNumber').invalid">
+				      ID Numer is <strong>required</strong>
+				   </mat-error>
+				 </mat-form-field>
+		 	
+		 		<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <input matInput [matDatepicker]="picker2" placeholder="Date of Issue">
+				  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+				  <mat-datepicker #picker2></mat-datepicker>
+				</mat-form-field>
+		 	
+		 		<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <input matInput [matDatepicker]="picker3" placeholder="Expiry Date">
+				  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+				  <mat-datepicker #picker3></mat-datepicker>
+				</mat-form-field>  
+		</div>
+
+		
+		<mat-icon>work</mat-icon>
+		<span>Employment Information</span>
+		<mat-divider [inset]="true"></mat-divider>
+			<div fxLayout="wrap row">
+		
+				 <mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Company Name*" [errorStateMatcher]="matcher" formControlName="CompanyName">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('CompanyName').invalid">
+				      Company Name is <strong>required</strong>
+				    </mat-error>
+				 </mat-form-field>
+			
+				<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Declared Income*" [errorStateMatcher]="matcher" formControlName="DeclaredIcome">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('DeclaredIcome').invalid">
+				      Declared Income is <strong>required</strong>
+				    </mat-error>
+				 </mat-form-field>
+			
+				<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Nature of Business</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Business of Business" [value]="Business.value">
+				      {{Business.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+			
+				 <mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Occupation Status</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Occupation of Occupation" [value]="Occupation.value">
+				      {{Occupation.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+			
+				<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Occupation Code</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Code of Code" [value]="Code.value">
+				      {{Code.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+			
+				<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Department</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Department of Department" [value]="Department.value">
+				      {{Department.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+			
+				 <mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				  <mat-label>Job Title</mat-label>
+				  <mat-select>
+				    <mat-option *ngFor="let Job of Job" [value]="Job.value">
+				      {{Job.viewValue}}
+				    </mat-option>
+				  </mat-select>
+				 </mat-form-field>
+			
+				<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+			    <input matInput placeholder="Years in Employment*" [errorStateMatcher]="matcher" formControlName="YearEmployment">
+			   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+			    <mat-error *ngIf="reactiveForm.get('YearEmployment').invalid">
+			      Years in Employment is <strong>required</strong>
+			    </mat-error>
+			 </mat-form-field>
+			
+				<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Months in Employment*" [errorStateMatcher]="matcher" formControlName="MonthEmployment">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('MonthEmployment').invalid">
+				      Years in Employment is <strong>required</strong>
+				    </mat-error>
+				 </mat-form-field>
+		</div>
+	    
+		<mat-icon>settings_phone</mat-icon>
+		<span>Contact Information</span>
+		<mat-divider [inset]="true"></mat-divider>
+			<div fxLayout="wrap row">
+				<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Email address1*" [errorStateMatcher]="matcher" formControlName="EmailAddress1">
+				    <mat-error *ngIf="reactiveForm.get('EmailAddress1').invalid">
+				      Email is <strong>required</strong>
+				    </mat-error>
+				 </mat-form-field>
+			
+				<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Email address2" [errorStateMatcher]="matcher" formControlName="EmailAddress2">
+				    <mat-error *ngIf="reactiveForm.get('EmailAddress2').invalid">
+				      Email is <strong>required</strong>
+				    </mat-error>
+				  </mat-form-field>
+			
+				 <mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Mobile Phone*" [errorStateMatcher]="matcher" formControlName="MobilePhone">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('MobilePhone').invalid">
+				      Mobile Phone is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Home Phone Number*" [errorStateMatcher]="matcher" formControlName="HomePhone">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('HomePhone').invalid">
+				      Home Phone Number is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field class="example-full-width" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Business Phone*" [errorStateMatcher]="matcher" formControlName="BusinessPhone">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('BusinessPhone').invalid">
+				      Business Phone Number is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+					<mat-label>Card To</mat-label>
+					<mat-select>
+					  <mat-option *ngFor="let CardTo of CardTo" [value]="CardTo.value">
+					    {{CardTo.viewValue}}
+					  </mat-option>
+					</mat-select>
+				</mat-form-field>
+			
+		
+		
+
+		
+		
+		<table mat-table [dataSource]="dataSource">
+			  <ng-container matColumnDef="CityType">
+			    <th mat-header-cell *matHeaderCellDef> City Type </th>
+			    <td mat-cell *matCellDef="let element"> {{element.CityType}} </td>
+			  </ng-container>
+			  <ng-container matColumnDef="ZipCode">
+			    <th mat-header-cell *matHeaderCellDef> Zip Code </th>
+			    <td mat-cell *matCellDef="let element"> {{element.ZipCode}} </td>
+			  </ng-container>
+			  <ng-container matColumnDef="AddressLine1">
+			    <th mat-header-cell *matHeaderCellDef> Address Line1 </th>
+			    <td mat-cell *matCellDef="let element"> {{element.AddressLine1}} </td>
+			  </ng-container>
+			 <ng-container matColumnDef="AddressLine2">
+			   <th mat-header-cell *matHeaderCellDef> Address Line2 </th>
+			   <td mat-cell *matCellDef="let element"> {{element.AddressLine2}} </td>
+			 </ng-container>
+			  <ng-container matColumnDef="AddressLine3">
+			   <th mat-header-cell *matHeaderCellDef> Address Line3 </th>
+			   <td mat-cell *matCellDef="let element"> {{element.AddressLine3}} </td>
+			 </ng-container>
+			 <ng-container matColumnDef="AddressLine4">
+			   <th mat-header-cell *matHeaderCellDef> Address Line4 </th>
+			   <td mat-cell *matCellDef="let element"> {{element.AddressLine4}} </td>
+			 </ng-container>
+			  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		</table>
+	
+
+	
+		
+		<table mat-table [dataSource]="dataSource2">
+
+			  <ng-container matColumnDef="Id">
+			    <th mat-header-cell *matHeaderCellDef> Id </th>
+			    <td mat-cell *matCellDef="let element"> {{element.Id}} </td>
+			  </ng-container>
+			  <ng-container matColumnDef="FirstName">
+			    <th mat-header-cell *matHeaderCellDef> FirstName </th>
+			    <td mat-cell *matCellDef="let element"> {{element.FirstName}} </td>
+			  </ng-container>
+			  <ng-container matColumnDef="PhoneNumber">
+			    <th mat-header-cell *matHeaderCellDef> PhoneNumber </th>
+			    <td mat-cell *matCellDef="let element"> {{element.PhoneNumber}} </td>
+			  </ng-container>
+			 <ng-container matColumnDef="Relationship">
+			   <th mat-header-cell *matHeaderCellDef> Relationship </th>
+			   <td mat-cell *matCellDef="let element"> {{element.Relationship}} </td>
+			 </ng-container>
+			  <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+			  <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+		</table>
+	</div>
+		
+		<mat-icon>question_answer</mat-icon>
+		<span>Other Information</span>
+		<mat-divider [inset]="true"></mat-divider>
+			<div fxLayout="row wrap">
+				<mat-form-field class="example-full-width other" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Total Credit Cards in Other banks*" [errorStateMatcher]="matcher" formControlName="TotalCredit">
+				    <mat-error *ngIf="reactiveForm.get('TotalCredit').invalid">
+				      Total Credit Cards in Other banks is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field class="example-full-width other" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Total Credit Card Limit*" [errorStateMatcher]="matcher" formControlName="CardLimit">
+				    <mat-error *ngIf="reactiveForm.get('CardLimit').invalid">
+				     Total Credit Card Limit is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field class="example-full-width other" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="(Current Employment)Years in Employment*" [errorStateMatcher]="matcher" formControlName="CurrentYears">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('CurrentYears').invalid">
+				     Years in Employment is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field class="example-full-width other" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="(Current Employment)Months in Employment*" [errorStateMatcher]="matcher" formControlName="CurrentMonth">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('CurrentMonth').invalid">
+				     Months in Employment is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field class="example-full-width other" fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+				    <input matInput placeholder="Threshold*" [errorStateMatcher]="matcher" formControlName="Threshold">
+				   <!--  <mat-hint>Errors appear instantly!</mat-hint> -->
+				    <mat-error *ngIf="reactiveForm.get('Threshold').invalid">
+				     Threshold is <strong>required</strong>
+				    </mat-error>
+				</mat-form-field>
+			
+				<mat-form-field fxFlex.gt-md="20" fxFlex.gt-sm="20" fxFlex.get-lg="15">
+					<mat-label>Requested Tenor</mat-label>
+					<mat-select>
+					  <mat-option *ngFor="let Tenor of Tenor" [value]="Tenor.value">
+					    {{Tenor.viewValue}}
+					  </mat-option>
+					</mat-select>
+				</mat-form-field>
+			
+		
+			<div id="submit">
+				<mat-checkbox>Customer Consent Details </mat-checkbox>
+				<button mat-raised-button color="primary">Submit</button>
+			</div>
+		</div>
+	</mat-card-content>
+	</mat-card>
+
+
+    </mat-tab>
+    <mat-tab label="(C)Applicant">Content 2</mat-tab>
+    <mat-tab label="Other">Content 3</mat-tab>
+</mat-tab-group>
+
+
+ </form> 
+
+
+
+
+
+
+
+
+
+
+
+
+ 

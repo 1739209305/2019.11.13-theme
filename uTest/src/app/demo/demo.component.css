@@ -1,0 +1,78 @@
+mat-toolbar{
+    height: 50px;
+    border-radius:2px; 
+}
+
+mat-form-field{
+    width: 90%;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+mat-label{
+    color: rgba(0,0,0,0.86);
+}
+.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after, .mat-input-element:disabled{
+    color: rgba(0,0,0,0.86);
+}
+#comments{
+    font-weight: 900;
+}
+#sideright{
+    /* background-color: red; */
+    
+    height: 600px;
+    /* border-left: 2px solid green;  */
+}
+#slider{
+    width: 3.8px;
+    margin-right: 5%;
+    height: 800px;
+    float: left;
+    background-color: #999; 
+    cursor: e-resize;
+}
+#demo{
+    float: left;
+    padding-top: 30%; 
+    width: 87%;
+    position: relative;
+    margin-right: 10px;
+    /* background-color: skyblue; */
+}
+
+#discuss{
+    height: 190px;
+    /* background-color: skyblue;  */
+    overflow: auto;
+    padding: 0;
+    margin:0;
+    margin-right: -17px;
+}
+
+/* 设置滚动条的样式 */
+        ::-webkit-scrollbar {
+        width:3px;
+        background-color: #eeeeee;
+        }
+
+        /* 滚动槽 */
+        ::-webkit-scrollbar-track {
+        border-radius:3px;
+        }
+
+        /* 滚动条滑块 */
+        ::-webkit-scrollbar-thumb {
+        border-radius:3px;
+        background:#bbbbbb;
+        }
+#imagecss{
+    width: 480px;
+    height: 300px;
+    margin-left: 20px;
+    margin-top: 120px;
+    border: 1px solid grey;
+}
+#imagecss img{
+    width: 480px;
+    height: 300px;
+}

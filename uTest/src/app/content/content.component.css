@@ -1,0 +1,33 @@
+#card{
+	height: 1500px;
+}
+mat-icon{
+	vertical-align: sub;
+	margin: 5px;
+	margin-top: 10px;
+}
+.mat-card .mat-divider-horizontal.mat-divider-inset{
+	margin-bottom: 5px; 
+} 
+
+table{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+#submit{
+	margin-left:500px;
+	margin-top:100px;
+}
+#submit button{
+	margin-left: 35px;
+	width: 120px;
+}
+mat-form-field{
+	padding: 10px;
+} 
+input:-internal-autofill-selected {
+    background-color: rgb(232, 240, 254) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}

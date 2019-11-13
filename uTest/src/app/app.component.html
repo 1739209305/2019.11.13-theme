@@ -1,0 +1,28 @@
+<body [class.myapp-default-theme]="DefaultTheme" [class.myapp-dark-theme]="DarkTheme" [class.myapp-blue-theme]="BlueTheme">
+
+    <app-header (menuToggle)="sidenavleft.toggle()" (listToggle)="sidemodelchange()" (DefaultTheme)="DefaultThemeFun()" (DarkTheme)="DarkThemeFun()" (BlueTheme)="BlueThemeFun()"></app-header>
+    <div id="box" fxLayout="row wrap">
+      <app-remove-demo id="remove" (mousedown)="removedown()"></app-remove-demo>
+
+
+      <div class="left" id="nav" fxFlex.lt-sm="15" fxFlex.lt-md="12" fxFlex.lt-lg="12">
+        <app-sidenav-left></app-sidenav-left> 
+      </div>
+      <div class="middle" fxFlex.lt-sm="72" fxFlex.lt-md="78" fxFlex.lt-lg="78">
+          <mat-sidenav-container class="example-sidenav-container" id="container">
+             <mat-sidenav #sidenavright position="end" mode="over" opened="false" id="sidemodel">
+              <!-- <app-demo (resize)= "resizefun()"></app-demo> -->
+              <app-pdfmode></app-pdfmode>
+             </mat-sidenav>
+             <mat-sidenav-content id="content">
+                <app-content></app-content> 
+             </mat-sidenav-content>
+          </mat-sidenav-container> 
+      </div>
+      <div id="right" fxFlex.lt-sm="15" fxFlex.lt-md="10" fxFlex.lt-lg="10">
+        <app-sidenav-right (pictureaspdf)="sidenavright.toggle()" (resize)="removedemobtn()"></app-sidenav-right>
+        <!-- (resize)="sidenavright.toggle()" (mdown)="mousedownfun()" 函数功能暂时用不上 -->
+      </div>
+    </div>
+  
+</body>

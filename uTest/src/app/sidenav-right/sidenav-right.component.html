@@ -1,0 +1,21 @@
+<mat-card id="right">
+    <button mat-icon-button>
+      <mat-icon id="apps"></mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon id="tag_faces"></mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon id="edit"></mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon id="show_chart"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="pictureaspdf.emit()">
+      <mat-icon id="gesture">picture_as_pdf</mat-icon>
+    </button>
+    <button mat-icon-button (click)="resize.emit()" (mousedown)="mdown.emit()">
+      <mat-icon>chat</mat-icon>
+    </button>
+ </mat-card>
+

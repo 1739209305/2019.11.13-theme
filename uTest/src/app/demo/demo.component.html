@@ -1,0 +1,33 @@
+<div id="all">
+<div id="slider" (mousedown)="resize.emit()">   
+  </div> 
+  <div id="demo">
+   <mat-toolbar>Memo</mat-toolbar>
+   <mat-card>
+     <div id="discuss">
+       <mat-form-field class="example-full-width" *ngFor="let discussdata of discussdata">
+         <mat-label>{{discussdata.name}}  {{discussdata.date}}  {{discussdata.time}}</mat-label>
+             <textarea matInput value="{{discussdata.discuss}}" disabled></textarea>
+       </mat-form-field>
+     </div>
+ 
+     <mat-form-field class="example-full-width" id="MemoCod">
+       <textarea matInput #message maxlength="256" placeholder="Your comments" (keyup.enter)="keyUp()" id="comments"></textarea>
+       <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+   </mat-form-field>
+ 
+ 
+ 
+   </mat-card>
+ </div> 
+ <!-- <div id="imagecss">
+   <img src="../assets/image/a.jpg" alt="">
+ </div> -->
+</div>
+
+
+
+
+
+
+

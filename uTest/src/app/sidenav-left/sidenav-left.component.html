@@ -1,0 +1,36 @@
+<mat-card>
+<section>
+<mat-expansion-panel #myPanel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>Application</mat-panel-title>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>
+</section>
+
+<section>
+<mat-accordion>
+  <mat-expansion-panel #panel1>
+    <mat-expansion-panel-header>Profile</mat-expansion-panel-header>
+    <mat-list role="list">
+      <a mat-list-item href="..." *ngFor="let link of Profilelinks"> {{ link }} </a>
+    </mat-list>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel #panel2>
+    <mat-expansion-panel-header>Product</mat-expansion-panel-header>
+   <mat-list role="list">
+      <a mat-list-item href="..." *ngFor="let link of Productlinks"> {{ link }} </a>
+  </mat-list>
+ 
+  </mat-expansion-panel>
+
+   <mat-expansion-panel #panel3>
+    <mat-expansion-panel-header>Assest&Liabilaty</mat-expansion-panel-header>
+   <mat-list role="list">
+      <a mat-list-item href="..." *ngFor="let link of Productlinks"> {{ link }} </a>
+  </mat-list>
+   
+  </mat-expansion-panel>
+</mat-accordion>
+</section> 
+</mat-card>

@@ -1,0 +1,65 @@
+/* mat-toolbar{
+    height: 50px;
+    border-radius:2px; 
+}
+
+mat-form-field{
+    width: 90%;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+mat-label{
+    color: rgba(0,0,0,0.86);
+}
+.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after, .mat-input-element:disabled{
+    color: rgba(0,0,0,0.86);
+}
+mat-card{
+    height: 300px;
+}
+#MemoCod{
+    margin-top: 20px;
+}
+#comments{
+    font-weight: 900;
+}
+
+
+#demo{
+    float: left;
+    padding-top: 20px; 
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+#iconi{
+    float: right;
+    height: 20px;
+    line-height: 20px;
+}
+
+#discuss{
+    height: 200px;
+    overflow: auto;
+    padding: 0;
+    margin:0;
+    margin-right: -17px;
+}
+
+
+        ::-webkit-scrollbar {
+        width:3px;
+        background-color: #eeeeee;
+        }
+
+        
+        ::-webkit-scrollbar-track {
+        border-radius:3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        border-radius:3px;
+        background:#bbbbbb;
+        }
+ */

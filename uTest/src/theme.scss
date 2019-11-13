@@ -1,0 +1,51 @@
+@import '~@angular/material/theming';
+/*引入material公用的主题风格*/
+@include mat-core();
+/*这是我设置的默认主题哦*/
+$my-app-primary: mat-palette($mat-blue,700);
+$my-app-accent: mat-palette($mat-orange,900);
+$my-app-warn: mat-palette($mat-red,700);
+$my-app-ft: mat-palette($mat-grey,900);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+/*@function my-mat-light-theme-foreground($color) {
+    @return (
+        base:              $color,
+        divider:           $black-12-opacity,
+        dividers:          $black-12-opacity,
+        disabled:          rgba($color, 0.38),
+        disabled-button:   rgba($color, 0.38),
+        disabled-text:     rgba($color, 0.88),
+        hint-text:         rgba($color, 0.38),
+        secondary-text:    rgba($color, 0.88),
+        icon:              rgba($color, 0.88),
+        icons:             rgba($color, 0.54),
+        text:              rgba($color, 0.99),
+        slider-off:        rgba($color, 0.88),
+        slider-off-active: rgba($color, 0.88),
+    );
+};
+$my-foreground: my-mat-light-theme-foreground(mat-color($my-app-ft, 900));
+$my-app-theme-custom: map-merge($my-app-theme, (foreground: $my-foreground));*/
+.myapp-default-theme{
+	@include angular-material-theme($my-app-theme);
+}
+
+
+
+
+
+// 自定义颜色
+$my-dark-primary: mat-palette($mat-blue,700);
+$my-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$my-dark-warn: mat-palette($mat-red,700);
+
+// 利用自定义颜色组装自定义主题
+$my-dark-theme: mat-dark-theme($my-dark-primary, $my-dark-accent, $my-dark-warn);
+// 设置自定义主题，使其生效
+.myapp-dark-theme {
+    @include angular-material-theme($my-dark-theme);
+}
+
+
+

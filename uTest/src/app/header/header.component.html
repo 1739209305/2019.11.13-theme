@@ -1,0 +1,44 @@
+<!-- <mat-toolbar id="toolbar1"></mat-toolbar> -->
+<mat-toolbar color="primary">
+
+
+<button mat-button [matMenuTriggerFor]="belowMenu">
+  <mat-icon>format_color_fill</mat-icon>
+</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item (click)="DefaultTheme.emit()">
+    <!-- <button mat-mini-fab color="primary" id="theme1">Theme1</button>
+     <button mat-mini-fab color="primary">Theme2</button> -->
+     Default Theme
+  </button>
+  <button mat-menu-item (click)="DarkTheme.emit()">
+     Dark Theme
+  </button>
+  <!--  <button mat-menu-item (click)="BlueTheme.emit()">
+    Blue Theme
+    </button> -->
+</mat-menu> 
+
+
+
+
+ <span class="example-spacer"></span>
+ <!-- 搜索框,设置了搜索框的大小 -->
+  <div id="search">
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Application ID">
+  </mat-form-field>
+  <button mat-icon-button>
+    <mat-icon>search</mat-icon>
+  </button>
+  </div>
+
+
+
+
+<button mat-button>
+  <mat-icon (click)="listToggle.emit()">list</mat-icon>
+</button>
+
+</mat-toolbar> 
+

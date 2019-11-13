@@ -1,0 +1,13 @@
+#imagecss{
+    width: 100%;
+    height: 1000px;
+   /*  margin-left: 5%;
+   margin-top: 15%;
+   border: 1px solid grey; */
+}
+#imagecss img{
+    width: 100%;
+    height: 100%;
+}
+
+
